@@ -41,6 +41,8 @@ PlatformConfigMap CreateTensorFlowPlatformConfigMap(
   }
   (*(*platform_config_map.mutable_platform_configs())[kTensorFlowModelPlatform]
         .mutable_source_adapter_config()) = source_adapter_config;
+  (*(*platform_config_map.mutable_platform_configs())[kPytorchModelPlatform]
+        .mutable_source_adapter_config()) = source_adapter_config;
   return platform_config_map;
 }
 
